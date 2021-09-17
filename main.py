@@ -43,5 +43,5 @@ def get_statistics(function, count) -> int:
 
     
 if __name__ == "__main__":
-    guess_the_number(target_number=np.random.randint(1, 101))
-    # print(get_statistics(function=guess_the_number, count=1000))
+    # guess_the_number(target_number=np.random.randint(1, 101), max_number=101)
+    print(get_statistics(function=guess_the_number, count=1000))
