@@ -14,7 +14,7 @@ def guess_the_number(target_number: int, max_number: int) -> int:
     min_number = 1 # Нижняя граница диапазона в первой итерации
     generated_number = np.random.randint(min_number, max_number) # Первое сгенерированое число
     count = 1 # Количество попыток
-    #print(f'Target number: {target_number}')
+    # print(f'Target number: {target_number}')
     while generated_number != target_number: # Запускается цикл генерации числа, работающий до тех пор, пока сгенериованное число не будет равно загаданному
         # print(f'Generated number: {generated_number}')
         count += 1 # Инкрементация значения количества попыток
@@ -23,7 +23,7 @@ def guess_the_number(target_number: int, max_number: int) -> int:
         else: # Если сгенерированное число меньше загаданного
             min_number = generated_number # Нижняя граница диапазона смещается "вверх", до значения сгенерированного числа
         generated_number = np.random.randint(min_number, max_number) # Генерация числа с новыми границами диапазона
-    #print(f'Number of attempts: {count}')
+    # print(f'Number of attempts: {count}')
     return count
 
 def get_statistics(function, count) -> int:
@@ -44,4 +44,4 @@ def get_statistics(function, count) -> int:
     
 if __name__ == "__main__":
     guess_the_number(target_number=np.random.randint(1, 101))
-    #print(get_statistics(function=guess_the_number, count=10000))
+    # print(get_statistics(function=guess_the_number, count=1000))
